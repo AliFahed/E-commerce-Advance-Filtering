@@ -7,16 +7,14 @@ import Colors from "./Colors/Colors";
 
 export default function Sidebar() {
   return (
-    <>
-      <section className="sidebar">
-        <div className="logo-container">
-          <FaShoppingCart className="sidebar-icons" />
-        </div>
+    <section className="sidebar">
+      <div className="logo-container">
+        <FaShoppingCart className="sidebar-icons" />
+      </div>
 
-        <Category />
-        <Price />
-        <Colors />
-      </section>
-    </>
+      <Category />
+      <Price />
+      <Colors />
+    </section>
   );
 }
