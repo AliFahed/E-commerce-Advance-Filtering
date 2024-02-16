@@ -5,6 +5,7 @@ import Recommended from "./Recommended/Recommended";
 import Sidebar from "./Sidebar/Sidebar";
 import Card from "./Components/Card";
 import { v4 as uuidv4 } from "uuid";
+import "./main.css";
 
 // get all db data as products
 import products from "./db/data";
@@ -23,7 +24,7 @@ export default function App() {
 
   // get filtered items using search field & store it
   const filteredItems = products.filter((product) =>
-    product.title.toLocaleLowerCase().indexOf(query.toLocaleLowerCase() !== -1)
+    product.title.toLowerCase().trim().includes(query.toLowerCase().trim())
   );
 
   // *** Radio filter ***
@@ -57,12 +58,12 @@ export default function App() {
     }
 
     return filteredProducts.map(
-      ({ img, title, star, reviews, prevPrice, newPrice }) => (
+      ({ img, title, stars, reviews, prevPrice, newPrice }) => (
         <Card
           key={uuidv4()}
           img={img}
           title={title}
-          star={star}
+          stars={stars}
           reviews={reviews}
           prevPrice={prevPrice}
           newPrice={newPrice}
@@ -71,14 +72,14 @@ export default function App() {
     );
   }
 
-  const filterResult = filteredData(products, selectedCategory, query);
+  const filteredResult = filteredData(products, selectedCategory, query);
 
   return (
     <>
       <Sidebar handleRadioChange={handleRadioChange} />
-      <Navigation />
-      <Recommended />
-      <Products />
+      <Navigation query={query} handleInputChange={handleInputChange} />
+      <Recommended handleButtonChange={handleButtonChange} />
+      <Products filteredResult={filteredResult} />
     </>
   );
 }

@@ -1,17 +1,34 @@
 import React from "react";
 import "./Recommended.css";
+import Button from "../Components/Button";
 
-export default function Recommended() {
+export default function Recommended({ handleButtonChange }) {
   return (
     <>
       <section>
         <h2 className="recommended-title">Recommended</h2>
         <div className="recommended-flex">
-          <button className="btns">All Products</button>
-          <button className="btns">Nike</button>
-          <button className="btns">Adidas</button>
-          <button className="btns">Puma</button>
-          <button className="btns">Vans</button>
+          <Button onClickHandler={handleButtonChange} value="" title="All" />
+          <Button
+            onClickHandler={handleButtonChange}
+            value="Nike"
+            title="Nike"
+          />
+          <Button
+            onClickHandler={handleButtonChange}
+            value="Adidas"
+            title="Adidas"
+          />
+          <Button
+            onClickHandler={handleButtonChange}
+            value="Puma"
+            title="Puma"
+          />
+          <Button
+            onClickHandler={handleButtonChange}
+            value="Vans"
+            title="Vans"
+          />
         </div>
       </section>
     </>
