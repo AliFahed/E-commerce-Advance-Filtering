@@ -31,12 +31,6 @@ export default function Category({ handleRadioChange }) {
         />
         <Input
           handleRadioChange={handleRadioChange}
-          value="sandals"
-          title="Sandals"
-          name="test"
-        />
-        <Input
-          handleRadioChange={handleRadioChange}
           value="heels"
           title="Heels"
           name="test"

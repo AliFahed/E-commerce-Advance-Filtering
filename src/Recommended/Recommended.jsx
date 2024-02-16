@@ -16,11 +16,6 @@ export default function Recommended({ handleButtonChange }) {
           />
           <Button
             onClickHandler={handleButtonChange}
-            value="Adidas"
-            title="Adidas"
-          />
-          <Button
-            onClickHandler={handleButtonChange}
             value="Puma"
             title="Puma"
           />
