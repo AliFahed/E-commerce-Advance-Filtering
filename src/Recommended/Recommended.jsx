@@ -5,7 +5,7 @@ import Button from "../Components/Button";
 export default function Recommended({ handleButtonChange }) {
   return (
     <>
-      <section>
+      <section className="recommended-section">
         <h2 className="recommended-title">Recommended</h2>
         <div className="recommended-flex">
           <Button onClickHandler={handleButtonChange} value="" title="All" />

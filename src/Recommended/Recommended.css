@@ -1,3 +1,7 @@
+.recommended-section {
+  margin-left: 1.1rem;
+}
+
 .recommended-flex {
   display: flex;
   margin-left: 20rem;
@@ -6,8 +10,9 @@
 .recommended-title {
   margin-left: 20rem;
   margin-bottom: 20px;
-  margin-top: 20px;
+  margin-top: 25px;
   font-size: 20px;
+  font-weight: normal;
   font-family: sans-serif;
 }
 

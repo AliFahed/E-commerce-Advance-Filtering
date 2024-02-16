@@ -7,18 +7,19 @@ export default function Card({
   title,
   stars,
   reviews,
-  prevPrice,
+  //prevPrice,
   newPrice,
 }) {
   return (
     <div className="card">
-      <img src={img} alt={title} />
+      <img src={img} alt={title} className="card-img" />
 
       <div className="card-details">
         <h3 className="card-title">{title}</h3>
         <div className="card-reviews">
-          <FaStar className="rating-star" />
-          {stars}
+          {Array.from({ length: stars }, (_, index) => (
+            <FaStar key={index} className="rating-star" />
+          ))}
           <span className="total-reviews">{reviews}</span>
         </div>
       </div>
