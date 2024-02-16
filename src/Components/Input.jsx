@@ -1,10 +1,22 @@
 import React from "react";
 
-export default function Input() {
+export default function Input({
+  handleRadioChange,
+  value,
+  title,
+  name,
+  color,
+}) {
   return (
-    <label htmlFor="" className="sidebar-label-container">
-      <input type="radio" name="test" />
-      <span className="checkmark"></span>All
+    <label className="sidebar-label-container">
+      <input
+        type="radio"
+        onChange={handleRadioChange}
+        value={value}
+        name={name}
+      />
+      <span className="checkmark" style={{ backgroundColor: color }}></span>
+      {title}
     </label>
   );
 }

@@ -3,6 +3,7 @@ import Navigation from "./Navigation/Navigation";
 import Products from "./Products/Products";
 import Recommended from "./Recommended/Recommended";
 import Sidebar from "./Sidebar/Sidebar";
+import Card from "./Components/Card";
 import { v4 as uuidv4 } from "uuid";
 
 // get all db data as products
@@ -74,7 +75,7 @@ export default function App() {
 
   return (
     <>
-      <Sidebar />
+      <Sidebar handleRadioChange={handleRadioChange} />
       <Navigation />
       <Recommended />
       <Products />
